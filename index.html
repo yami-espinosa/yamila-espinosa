@@ -6,7 +6,9 @@
 <title>Yami Espinosa Hair Studio — Potencio tu esencia</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root {
+:root{
+  --fondo:#7D5551;
+  --oro-fondo:#F2DCB4;
   --crema: #F5EDE3;
   --crema-osc: #EDD9C5;
   --rosa: #E8A5A5;
@@ -52,22 +54,6 @@ body{font-family:'Jost',sans-serif;background:var(--crema);color:var(--texto);ov
 
 .reveal{opacity:0;transition:opacity 0.7s ease,transform 0.7s ease;transform:translateY(40px)}
 .reveal.visible{opacity:1;transform:translateY(0)}
-
-/* ── BOTÓN FLOTANTE WA ── */
-.wa-float{
-  position:fixed;bottom:24px;right:24px;z-index:999;
-  display:flex;align-items:center;gap:10px;
-  background:linear-gradient(135deg,#25d366,#1db954);
-  color:#fff;border-radius:50px;
-  padding:14px 22px;font-family:'Jost',sans-serif;
-  font-size:14px;font-weight:600;letter-spacing:0.5px;
-  text-decoration:none;
-  box-shadow:0 4px 24px rgba(37,211,102,0.4);
-  animation:pulseWA 2.5s ease 3s infinite;
-  transition:transform .2s;
-}
-.wa-float:hover{transform:scale(1.05)translateY(-2px);box-shadow:0 8px 40px rgba(37,211,102,0.6)}
-.wa-float svg{width:20px;height:20px;flex-shrink:0}
 
 /* ── HERO ── */
 .hero{
@@ -142,8 +128,8 @@ body{font-family:'Jost',sans-serif;background:var(--crema);color:var(--texto);ov
 .hero-tag-1{bottom:40px;left:-20px;background:var(--blanco)}
 .hero-tag-1 .dot{width:8px;height:8px;border-radius:50%;background:var(--dorado-bright)}
 .hero-tag-1 .txt{font-size:12px;font-weight:500;color:var(--marron-osc)}
-.hero-tag-2{top:60px;right:-20px;background:var(--marron-osc);animation-delay:.5s}
-.hero-tag-2 .lbl{font-size:11px;color:rgba(245,237,227,0.7)}
+.hero-tag-2{top:60px;right:-20px;background:var(--fondo);animation-delay:.5s}
+.hero-tag-2 .lbl{font-size:11px;color:rgba(245,237,227,.9)}
 .hero-tag-2 .val{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--dorado-claro)}
 
 
@@ -164,7 +150,7 @@ body{font-family:'Jost',sans-serif;background:var(--crema);color:var(--texto);ov
 
 /* ── HORARIO BANNER ── */
 .horario-banner{
-  background:linear-gradient(135deg,var(--marron-osc) 0%,#2D1A08 100%);
+  background:linear-gradient(135deg,var(--fondo) 0%,#5F3F3C 100%);
   padding:28px 24px;text-align:center;position:relative;overflow:hidden;
 }
 .horario-banner::before{
@@ -175,7 +161,7 @@ body{font-family:'Jost',sans-serif;background:var(--crema);color:var(--texto);ov
 .horario-item{text-align:center}
 .horario-icon{font-size:22px;margin-bottom:4px}
 .horario-val{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--dorado-claro);line-height:1.2}
-.horario-lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,237,227,0.6);margin-top:2px}
+.horario-lbl{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(245,237,227,.85);margin-top:2px}
 .horario-sep{width:1px;height:40px;background:rgba(196,150,90,0.25)}
 .horario-badge{
   background:rgba(196,150,90,0.15);border:1px solid rgba(196,150,90,0.4);
@@ -232,7 +218,7 @@ section{padding:80px 24px}
 
 /* ── CTA INTERMEDIO ── */
 .cta-band{
-  background:var(--marron-osc);padding:40px 24px;text-align:center;
+  background:var(--fondo);padding:40px 24px;text-align:center;
   position:relative;overflow:hidden;
 }
 .cta-band::before{
@@ -314,15 +300,15 @@ section{padding:80px 24px}
 }
 
 /* ── TURNOS ── */
-.turnos-section{background:var(--marron-osc);text-align:center}
+.turnos-section{background:var(--fondo);text-align:center}
 .turnos-section .sec-eyebrow{color:var(--dorado-claro)}
 .turnos-section .sec-title{color:var(--crema)}
 .turnos-section .sec-title em{color:var(--dorado-claro)}
-.turno-info{max-width:580px;margin:0 auto 44px;font-size:15px;color:rgba(245,237,227,0.7);line-height:1.8;font-weight:300}
+.turno-info{max-width:580px;margin:0 auto 44px;font-size:15px;color:rgba(245,237,227,.92);line-height:1.8;font-weight:300}
 .turno-pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;max-width:780px;margin:0 auto 48px}
 .paso{background:rgba(255,255,255,0.05);border:1px solid rgba(196,150,90,0.2);border-radius:16px;padding:28px 20px}
 .paso-num{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:300;color:var(--dorado-claro);line-height:1;margin-bottom:10px}
-.paso-texto{font-size:13px;color:rgba(245,237,227,0.7);line-height:1.6;font-weight:300}
+.paso-texto{font-size:13px;color:rgba(245,237,227,.92);line-height:1.6;font-weight:300}
 .btn-turno{
   display:inline-flex;align-items:center;gap:10px;
   padding:18px 44px;border-radius:100px;
@@ -340,10 +326,10 @@ section{padding:80px 24px}
 .c-btn-wa{background:#25d366;color:#fff;box-shadow:0 4px 20px rgba(37,211,102,0.3)}
 .c-btn-wa:hover{background:#1db954;transform:translateY(-2px);box-shadow:0 8px 35px rgba(37,211,102,0.5)}
 .c-btn-ig{background:transparent;color:var(--marron-osc);border:1.5px solid var(--marron-osc)}
-.c-btn-ig:hover{background:var(--marron-osc);color:var(--crema);transform:translateY(-2px)}
+.c-btn-ig:hover{background:var(--fondo);color:var(--crema);transform:translateY(-2px)}
 
 /* ── FOOTER ── */
-footer{background:var(--marron-osc);padding:32px 24px;text-align:center;font-size:12px;color:rgba(245,237,227,0.5);font-weight:300;letter-spacing:0.5px}
+footer{background:var(--fondo);padding:32px 24px;text-align:center;font-size:12px;color:rgba(245,237,227,0.5);font-weight:300;letter-spacing:0.5px}
 footer span{color:var(--dorado-claro)}
 
 /* ── MOBILE ── */
@@ -354,24 +340,200 @@ footer span{color:var(--dorado-claro)}
   .hero-left{padding:40px 24px 60px}
   .hero-tag{display:none}
   .hero-orn-1,.hero-orn-2{display:none}
-  .wa-float span{display:none}
-  .wa-float{padding:14px 16px}
   .horario-sep{display:none}
   .precio-card{flex-direction:column;align-items:flex-start;gap:12px}
   .precio-valor{text-align:left;margin-left:0}
 }
+
+/* ── MENÚ SUPERIOR (estilo Alan, paleta Yami) ── */
+html{scroll-padding-top:70px}
+body{padding-bottom:64px}
+.topnav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 5vw;transition:background .25s,box-shadow .25s,padding .25s}
+.topnav.solid{background:rgba(245,237,227,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(196,150,90,.3);padding-top:10px;padding-bottom:10px}
+.topnav-brand{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:400;color:var(--marron-osc);text-decoration:none;line-height:1}
+.topnav-brand em{color:var(--dorado);font-style:italic}
+.topnav-links{display:flex;gap:28px}
+.topnav-links a{color:var(--marron);text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.5px;transition:color .2s}
+.topnav-links a:hover{color:var(--dorado)}
+.topnav-cta{background:linear-gradient(135deg,var(--dorado),var(--dorado-claro));color:var(--marron-osc);font-weight:600;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:11px 20px;border-radius:100px;text-decoration:none;white-space:nowrap;transition:transform .2s}
+.topnav-cta:hover{transform:translateY(-2px)}
+
+/* ── BARRA FIJA INFERIOR (estilo Alan, paleta Yami) ── */
+.yami-bar{position:fixed;bottom:0;left:0;right:0;background:var(--fondo);border-top:2px solid var(--dorado);padding:10px 14px;display:flex;align-items:center;justify-content:center;gap:12px;z-index:998;box-shadow:0 -4px 20px rgba(0,0,0,.35)}
+.yami-bar-txt{font-size:12.5px;color:var(--crema);font-weight:500;line-height:1.3}
+.yami-bar-txt b{color:var(--dorado-claro);font-weight:600}
+.yami-bar-cta{background:linear-gradient(135deg,#25d366,#1db954);color:#fff;font-weight:700;font-size:13px;padding:10px 18px;border-radius:24px;text-decoration:none;white-space:nowrap;animation:pulseWA 2.5s ease infinite}
+.yami-bar-x{background:none;border:none;color:rgba(245,237,227,.85);font-size:18px;cursor:pointer;padding:4px;line-height:1}
+@media(max-width:768px){
+  .topnav-links{display:none}
+  .topnav-brand{font-size:22px}
+  .topnav-cta{padding:9px 14px;font-size:10px}
+  .hero{padding-top:56px}
+}
+@media(max-width:480px){.yami-bar-txt{font-size:11.5px}.yami-bar-cta{font-size:12px;padding:9px 14px}}
+
+/* ── HERO GRANDE (estilo Alan, paleta Yami) ── */
+@keyframes heroZoom{from{transform:scale(1)}to{transform:scale(1.08)}}
+@keyframes goldBreath{0%,100%{opacity:.35}50%{opacity:.85}}
+.hero-right{position:absolute;top:0;right:0;bottom:0;left:44%;height:auto;display:block;overflow:hidden;animation:heroFadeIn 1.2s ease .3s forwards}
+.hero-foto-wrap{position:relative;width:100%;height:100%}
+.hero-foto{width:100%;height:100%;object-fit:cover;object-position:center 14%;border-radius:0;filter:brightness(.98) contrast(1.03);animation:heroZoom 22s ease-out both;transform-origin:60% 25%}
+.hero-right::before{content:"";position:absolute;top:0;left:0;right:0;height:96px;background:linear-gradient(to bottom,rgba(245,237,227,.82),rgba(245,237,227,0));z-index:2;pointer-events:none}
+.hero-right::after{content:"";position:absolute;inset:0;background:linear-gradient(to right,#F1E3D4 0%,rgba(241,227,212,.85) 7%,rgba(241,227,212,0) 34%);z-index:2;pointer-events:none}
+.hero-foto-wrap::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 78% 18%,rgba(232,201,154,.55) 0%,rgba(232,201,154,0) 55%);mix-blend-mode:soft-light;animation:goldBreath 7s ease-in-out infinite;pointer-events:none;z-index:1}
+.hero-tag{z-index:3}
+.hero-tag-1{bottom:56px;left:9%}
+.hero-tag-2{top:120px;right:5vw}
+.topnav{background:linear-gradient(to bottom,rgba(245,237,227,.92) 0%,rgba(245,237,227,.7) 55%,rgba(245,237,227,0) 100%)}
+@media(max-width:768px){
+  .hero{display:grid;grid-template-columns:1fr;min-height:auto;padding-top:56px;background:linear-gradient(180deg,var(--crema) 0%,var(--crema) 42%,var(--crema-osc) 100%)}
+  .hero-right{position:relative;left:auto;top:auto;right:auto;bottom:auto;order:-1;width:100%;height:94vw;max-height:540px}
+  .hero-right::before{height:36px}
+  .hero-right::after{background:linear-gradient(to bottom,rgba(245,237,227,0) 58%,var(--crema) 100%)}
+  .hero-foto{object-position:center 8%}
+  .hero-left{padding:0 24px 56px;margin-top:-30px}
+  .hero-tag{display:none}
+}
+
+/* ── DORADOS CON BRILLO SUAVE (más apagados que el botón de reservar) ── */
+@keyframes goldGlow{0%,100%{box-shadow:0 0 10px rgba(196,150,90,.14)}50%{box-shadow:0 0 22px rgba(196,150,90,.30)}}
+@keyframes goldText{0%,100%{text-shadow:0 0 6px rgba(196,150,90,0)}50%{text-shadow:0 0 14px rgba(196,150,90,.35)}}
+@keyframes goldSheen{0%{background-position:0% center}100%{background-position:200% center}}
+@keyframes statGlow{0%,100%{text-shadow:0 0 10px rgba(196,150,90,.18)}50%{text-shadow:0 0 22px rgba(196,150,90,.42)}}
+.hero-badge,.horario-badge,.resena-avatar,.btn-secondary,.topnav-cta,.faq-item.open .faq-arrow{animation-name:goldGlow;animation-duration:4.5s;animation-timing-function:ease-in-out;animation-iteration-count:infinite}
+.hero-badge{animation:heroFadeDown .7s ease .15s forwards,goldGlow 4.5s ease-in-out 1.2s infinite}
+.servicio-precio span,.resena-stars,.horario-val,.paso-num{animation:goldText 5s ease-in-out infinite}
+.servicio-card:hover{border-color:rgba(196,150,90,.45)}
+@supports ((-webkit-background-clip:text) or (background-clip:text)){
+  .hero-nombre em,.sec-title em{background:linear-gradient(100deg,#C4965A 15%,#E8C99A 40%,#C4965A 65%,#C4965A 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:goldSheen 8s linear infinite}
+  .turnos-section .sec-title em{background:linear-gradient(100deg,#E8C99A 15%,#F6E3BF 40%,#E8C99A 65%,#E8C99A 100%);background-size:200% auto;-webkit-background-clip:text;background-clip:text}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-foto,.hero-foto-wrap::after,.hero-badge,.horario-badge,.resena-avatar,.btn-secondary,.topnav-cta,.servicio-precio span,.resena-stars,.horario-val,.paso-num,.hero-nombre em,.sec-title em,.yami-bar-cta{animation:none!important}
+}
+
+/* ══ ESTILO V2 (estructura inspirada en referencia, paleta Yami) ══ */
+@keyframes navIn{from{transform:translateY(-100%)}to{transform:translateY(0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.topnav{animation:navIn .8s ease .2s both}
+.reveal{transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+
+/* Tipografía más grande y botones rectos */
+.sec-title{font-size:clamp(40px,6.4vw,88px);font-weight:400;line-height:1.02;letter-spacing:-.01em;margin-bottom:56px}
+.sec-eyebrow{letter-spacing:.32em}
+.btn-primary,.btn-secondary,.topnav-cta,.btn-turno,.btn-cta-wa,.yami-bar-cta,.c-btn{border-radius:2px}
+.btn-primary,.btn-secondary,.topnav-cta,.btn-turno,.btn-cta-wa{letter-spacing:.22em}
+.btn-turno svg,.btn-cta-wa svg{flex-shrink:0}
+.resenas-section,.faq-section{padding:110px 6vw}
+
+/* Cinta de servicios */
+.marquee{overflow:hidden;border-top:1px solid rgba(196,150,90,.3);border-bottom:1px solid rgba(196,150,90,.3);padding:22px 0;background:var(--crema)}
+.marquee-track{display:flex;width:max-content;animation:marquee 52s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.mq-item{display:flex;align-items:center;gap:48px;padding-right:48px;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--texto-suave);font-weight:400;white-space:nowrap}
+.mq-dot{width:6px;height:6px;border-radius:50%;background:var(--rosa);display:inline-block}
+
+/* Servicios: lista numerada con precio */
+.svc-section{background:var(--blanco);padding:120px 6vw}
+.svc-head,.svc-list{max-width:1200px;margin:0 auto}
+.svc-head .sec-title{margin-bottom:56px}
+.svc-list{border-top:1px solid rgba(196,150,90,.3)}
+.svc-item{border-bottom:1px solid rgba(196,150,90,.3)}
+.svc-row{width:100%;display:grid;grid-template-columns:64px 1fr auto 28px;align-items:baseline;gap:16px;padding:30px 0;background:none;border:none;cursor:pointer;text-align:left;font-family:inherit;color:inherit}
+.svc-num{font-size:13px;letter-spacing:.2em;color:var(--texto-suave)}
+.svc-title{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,3.6vw,52px);font-weight:400;color:var(--marron-osc);line-height:1.05;transition:color .3s,transform .4s}
+.svc-price{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--dorado);white-space:nowrap;font-weight:500}
+.svc-plus{width:14px;height:14px;position:relative;align-self:center;justify-self:end}
+.svc-plus::before,.svc-plus::after{content:"";position:absolute;background:var(--dorado);transition:transform .35s}
+.svc-plus::before{left:0;right:0;top:50%;height:1px}
+.svc-plus::after{top:0;bottom:0;left:50%;width:1px}
+.svc-item.open .svc-plus::after{transform:scaleY(0)}
+.svc-row:hover .svc-title,.svc-item.open .svc-title{color:var(--dorado)}
+.svc-row:hover .svc-title{transform:translateX(10px)}
+.svc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.svc-item.open .svc-panel{grid-template-rows:1fr}
+.svc-panel-inner{overflow:hidden;padding-left:80px}
+.svc-desc{font-size:15px;line-height:1.8;color:var(--texto-suave);font-weight:300;max-width:560px;padding-top:4px}
+.svc-note{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:19px;color:var(--marron);margin-top:12px}
+.svc-cta{display:inline-block;margin:18px 0 32px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--marron-osc);text-decoration:none;font-weight:500;border-bottom:1px solid var(--dorado);padding-bottom:4px;transition:color .2s,letter-spacing .3s}
+.svc-cta:hover{color:var(--dorado);letter-spacing:.28em}
+
+/* Reservas */
+.reserva{padding:130px 6vw;text-align:left}
+.reserva-inner{max-width:1200px;margin:0 auto}
+.reserva .turno-info{margin:0 0 56px;max-width:520px;text-align:left}
+.reserva .turno-pasos{max-width:none;margin:0 0 56px;gap:40px}
+.reserva .paso{background:transparent;border:none;border-top:1px solid rgba(196,150,90,.4);border-radius:0;padding:24px 0 0;text-align:left}
+.reserva .paso-num{font-size:52px}
+.btn-turno{padding:20px 44px}
+.reserva-tel{margin-top:28px;font-size:13px;color:rgba(245,237,227,.85);font-weight:300}
+.reserva-tel a{color:var(--dorado-claro);text-decoration:none;border-bottom:1px solid rgba(232,201,154,.4)}
+
+/* Footer de 4 columnas */
+.foot{background:var(--fondo);color:var(--crema);padding:90px 6vw 36px}
+.foot-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1.3fr;gap:48px}
+.foot-brand{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:400;line-height:1.1}
+.foot-brand em{color:var(--dorado-claro);font-style:italic}
+.foot-tag{margin-top:14px;font-size:13px;line-height:1.8;color:rgba(245,237,227,.85);font-weight:300}
+.foot h4{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--dorado-claro);font-weight:500;margin-bottom:18px}
+.foot a,.foot .fl{display:block;font-size:14px;color:rgba(245,237,227,.88);text-decoration:none;margin-bottom:12px;font-weight:300;transition:color .2s}
+.foot a:hover{color:var(--dorado-claro)}
+.foot-bottom{max-width:1200px;margin:64px auto 0;padding-top:24px;border-top:1px solid rgba(196,150,90,.2);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12px;color:rgba(245,237,227,.78);font-weight:300}
+
+/* Menú móvil */
+.burger{display:none;flex-direction:column;gap:6px;padding:8px;background:none;border:none;cursor:pointer;z-index:51}
+.burger span{display:block;width:24px;height:1px;background:var(--marron-osc);transition:transform .35s,opacity .25s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mnav{position:fixed;inset:0;background:var(--crema);z-index:49;display:flex;flex-direction:column;justify-content:center;gap:22px;padding:0 8vw;opacity:0;pointer-events:none;transition:opacity .35s}
+.mnav.open{opacity:1;pointer-events:auto}
+.mnav a{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,9vw,48px);font-weight:400;color:var(--marron-osc);text-decoration:none;line-height:1.1}
+.mnav .mnav-cta{margin-top:18px;align-self:flex-start;font-family:'Jost',sans-serif;font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;background:linear-gradient(135deg,var(--dorado),var(--dorado-claro));padding:16px 28px;border-radius:2px}
+
+@media(max-width:900px){
+  .topnav-links{display:none}
+  .burger{display:flex}
+}
+@media(max-width:768px){
+  .svc-section,.reserva{padding:80px 22px}
+  .resenas-section,.faq-section{padding:80px 22px}
+  .sec-title{margin-bottom:36px}
+  .svc-row{grid-template-columns:34px 1fr 22px;row-gap:6px;padding:24px 0}
+  .svc-price{grid-column:2;grid-row:2;font-size:12px}
+  .svc-plus{grid-column:3;grid-row:1}
+  .svc-panel-inner{padding-left:50px}
+  .foot{padding:70px 22px 28px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px 24px}
+  .foot-grid>div:first-child{grid-column:1/-1}
+  .foot-grid>div:last-child{grid-column:1/-1}
+  .reserva .turno-pasos{gap:28px}
+}
+@media(max-width:560px){.topnav-cta{display:none}}
+@media(prefers-reduced-motion:reduce){.marquee-track,.topnav{animation:none!important}}
+
+/* Dorado más claro para textos sobre los fondos oscuros (legibilidad) */
+.horario-val,.foot h4,.foot-brand em,.reserva-tel a,.yami-bar-txt b,.turnos-section .sec-eyebrow,.paso-num,.cta-band-txt span,.foot a:hover{color:var(--oro-fondo)}
 </style>
 </head>
 <body>
 
-<!-- BOTÓN FLOTANTE WHATSAPP -->
-<a href="https://wa.me/5493426144332?text=Hola%20Yami!%20Quiero%20reservar%20un%20turno%20%F0%9F%92%87" class="wa-float" target="_blank">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  <span>Reservá tu turno</span>
-</a>
+<nav class="topnav" id="topnav">
+  <a class="topnav-brand" href="#top">Yami <em>Espinosa</em></a>
+  <div class="topnav-links"><a href="#servicios">Servicios</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div>
+  <a class="topnav-cta" href="https://wa.me/5493426144332?text=Hola%20Yami!%20Quiero%20reservar%20una%20cita%20%F0%9F%92%87" target="_blank" rel="noopener">Reservá tu cita</a>
+<button type="button" class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mnav"><span></span><span></span><span></span></button>
+</nav>
+
 
 <!-- ══ HERO ══ -->
-<section class="hero">
+
+<div class="mnav" id="mnav">
+  <a href="#servicios">Servicios</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a>
+  <a class="mnav-cta" href="https://wa.me/5493426144332?text=Hola%20Yami!%20Quiero%20reservar%20una%20cita%20%F0%9F%92%87" target="_blank" rel="noopener">Reservá tu cita</a>
+</div>
+
+<section class="hero" id="top">
   <div class="hero-orn hero-orn-1"></div>
   <div class="hero-orn hero-orn-2"></div>
 
@@ -432,49 +594,107 @@ footer span{color:var(--dorado-claro)}
   </div>
 </div>
 
+<!-- ══ MARQUEE ══ -->
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><span class="mq-item">Color<i class="mq-dot"></i></span><span class="mq-item">Balayage &amp; Contouring<i class="mq-dot"></i></span><span class="mq-item">Alisado sin formol<i class="mq-dot"></i></span><span class="mq-item">Nutrición &amp; Hidratación<i class="mq-dot"></i></span><span class="mq-item">Corte &amp; Peinado<i class="mq-dot"></i></span><span class="mq-item">Corrección de color<i class="mq-dot"></i></span><span class="mq-item">Maquillaje<i class="mq-dot"></i></span><span class="mq-item">Lunes a domingo<i class="mq-dot"></i></span><span class="mq-item">Feriados incluidos<i class="mq-dot"></i></span><span class="mq-item">Color<i class="mq-dot"></i></span><span class="mq-item">Balayage &amp; Contouring<i class="mq-dot"></i></span><span class="mq-item">Alisado sin formol<i class="mq-dot"></i></span><span class="mq-item">Nutrición &amp; Hidratación<i class="mq-dot"></i></span><span class="mq-item">Corte &amp; Peinado<i class="mq-dot"></i></span><span class="mq-item">Corrección de color<i class="mq-dot"></i></span><span class="mq-item">Maquillaje<i class="mq-dot"></i></span><span class="mq-item">Lunes a domingo<i class="mq-dot"></i></span><span class="mq-item">Feriados incluidos<i class="mq-dot"></i></span></div></div>
+
 <!-- ══ SERVICIOS ══ -->
-<section class="servicios-section" id="servicios">
-  <div style="max-width:1100px;margin:0 auto;text-align:center;">
+<section class="svc-section" id="servicios">
+  <div class="svc-head">
     <div class="sec-eyebrow reveal">✦ Lo que hago</div>
     <div class="sec-title reveal">Mis <em>servicios</em></div>
-          <div class="servicios-grid">
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">🎨</div>
-        <div class="servicio-nombre">Color</div>
-        <div class="servicio-desc">Retoque de raíz y color completo. Tonos personalizados que realzan tu belleza natural.</div>
-        <div class="servicio-precio">Desde <span>$35.000</span> · Completo desde $50.000</div>
+  </div>
+  <div class="svc-list">
+      <div class="svc-item reveal open">
+        <button type="button" class="svc-row" aria-expanded="true">
+          <span class="svc-num">01</span>
+          <span class="svc-title">Color</span>
+          <span class="svc-price">Desde $35.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Retoque de raíz y color completo. Tonos personalizados que realzan tu belleza natural.</p>
+          <p class="svc-note">Completo desde $50.000</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Color%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">✨</div>
-        <div class="servicio-nombre">Balayage & Contouring</div>
-        <div class="servicio-desc">Técnicas de iluminación y degradado que enmarcan tu rostro de forma única y natural.</div>
-        <div class="servicio-precio">Desde <span>$50.000</span> · Balayage desde $85.000</div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">02</span>
+          <span class="svc-title">Balayage &amp; Contouring</span>
+          <span class="svc-price">Desde $50.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Técnicas de iluminación y degradado que enmarcan tu rostro de forma única y natural.</p>
+          <p class="svc-note">Balayage desde $85.000</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Balayage%20%26%20Contouring%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">💫</div>
-        <div class="servicio-nombre">Alisado sin formol</div>
-        <div class="servicio-desc">Progresivo orgánico. Apto para niñas y embarazadas. Pelo lacio, brillante y sin frizz.</div>
-        <div class="servicio-precio">Desde <span>$40.000</span> · Según largo y cantidad</div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">03</span>
+          <span class="svc-title">Alisado sin formol</span>
+          <span class="svc-price">Desde $40.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Progresivo orgánico. Apto para niñas y embarazadas. Pelo lacio, brillante y sin frizz.</p>
+          <p class="svc-note">Según largo y cantidad</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Alisado%20sin%20formol%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">🌿</div>
-        <div class="servicio-nombre">Nutrición & Hidratación</div>
-        <div class="servicio-desc">Tratamientos profundos para recuperar la salud y el brillo de tu cabello.</div>
-        <div class="servicio-precio">Desde <span>$30.000</span> · Con corte desde $40.000</div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">04</span>
+          <span class="svc-title">Nutrición &amp; Hidratación</span>
+          <span class="svc-price">Desde $30.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Tratamientos profundos para recuperar la salud y el brillo de tu cabello.</p>
+          <p class="svc-note">Con corte desde $40.000</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Nutrici%C3%B3n%20%26%20Hidrataci%C3%B3n%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">✂️</div>
-        <div class="servicio-nombre">Corte & Peinado</div>
-        <div class="servicio-desc">Cortes que potencian tu estilo. Peinados para cada ocasión especial.</div>
-        <div class="servicio-precio">Desde <span>$40.000</span> · Según diseño</div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">05</span>
+          <span class="svc-title">Corte &amp; Peinado</span>
+          <span class="svc-price">Desde $40.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Cortes que potencian tu estilo. Peinados para cada ocasión especial.</p>
+          <p class="svc-note">Según diseño</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Corte%20%26%20Peinado%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-      <div class="servicio-card reveal">
-        <div class="servicio-icon">🔬</div>
-        <div class="servicio-nombre">Corrección de color</div>
-        <div class="servicio-desc">Especialista en correcciones complejas. Transformamos tu cabello con técnica y cuidado.</div>
-        <div class="servicio-precio">Desde <span>$75.000</span> · Según complejidad</div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">06</span>
+          <span class="svc-title">Corrección de color</span>
+          <span class="svc-price">Desde $75.000</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Especialista en correcciones complejas. Transformamos tu cabello con técnica y cuidado.</p>
+          <p class="svc-note">Según complejidad</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Correcci%C3%B3n%20de%20color%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
       </div>
-    </div>
+      <div class="svc-item reveal">
+        <button type="button" class="svc-row" aria-expanded="false">
+          <span class="svc-num">07</span>
+          <span class="svc-title">Maquillaje</span>
+          <span class="svc-price">Consultá</span>
+          <span class="svc-plus" aria-hidden="true"></span>
+        </button>
+        <div class="svc-panel"><div class="svc-panel-inner">
+          <p class="svc-desc">Maquillaje profesional para realzar tu belleza en el día que más lo necesitás. Contame qué buscás y armamos el look juntas.</p>
+          <p class="svc-note">Te paso el valor por WhatsApp.</p>
+          <a class="svc-cta" href="https://wa.me/5493426144332?text=Hola%20Yami%21%20Quiero%20reservar%20una%20cita%20para%20Maquillaje%20%F0%9F%92%87" target="_blank" rel="noopener">Reservar este servicio <span aria-hidden="true">→</span></a>
+        </div></div>
+      </div>
   </div>
 </section>
 
@@ -490,7 +710,7 @@ footer span{color:var(--dorado-claro)}
 </div>
 
 <!-- ══ RESEÑAS ══ -->
-<section class="resenas-section">
+<section class="resenas-section" id="resenas">
   <div style="max-width:1000px;margin:0 auto;text-align:center;">
     <div class="sec-eyebrow reveal">💬 Opiniones</div>
     <div class="sec-title reveal">Lo que dicen <em>ellas</em></div>
@@ -612,53 +832,100 @@ footer span{color:var(--dorado-claro)}
 </section>
 
 <!-- ══ TURNOS ══ -->
-<section class="turnos-section" id="turnos">
-  <div class="sec-eyebrow reveal">📅 Reservas</div>
-  <div class="sec-title reveal">¿Cómo <em>agendar</em>?</div>
-  <p class="turno-info">Es simple. Escribime por WhatsApp y lo organizamos juntas.</p>
-  <div class="turno-pasos">
-    <div class="paso reveal">
-      <div class="paso-num">01</div>
-      <div class="paso-texto">Escribime por WhatsApp y contame sobre tu cabello y qué querés hacer</div>
+<section class="turnos-section reserva" id="turnos">
+  <div class="reserva-inner">
+    <div class="sec-eyebrow reveal">📅 Reservas</div>
+    <div class="sec-title reveal">¿Cómo <em>agendar</em>?</div>
+    <p class="turno-info reveal">Es simple. Escribime por WhatsApp y lo organizamos juntas.</p>
+    <div class="turno-pasos">
+      <div class="paso reveal"><div class="paso-num">01</div><div class="paso-texto">Escribime por WhatsApp y contame sobre tu cabello y qué querés hacer</div></div>
+      <div class="paso reveal"><div class="paso-num">02</div><div class="paso-texto">Te asesoro y acordamos la fecha según tu disponibilidad</div></div>
+      <div class="paso reveal"><div class="paso-num">03</div><div class="paso-texto">Te espero en mi studio de lunes a domingo, cuando más te convenga</div></div>
     </div>
-    <div class="paso reveal">
-      <div class="paso-num">02</div>
-      <div class="paso-texto">Te asesoro y acordamos la fecha según tu disponibilidad</div>
-    </div>
-    <div class="paso reveal">
-      <div class="paso-num">03</div>
-      <div class="paso-texto">Te espero en mi studio de lunes a domingo, cuando más te convenga</div>
-    </div>
+    <a href="https://wa.me/5493426144332?text=Hola%20Yami!%20Quiero%20reservar%20una%20cita%20%F0%9F%92%87" class="btn-turno" target="_blank" rel="noopener">Reservá tu cita ahora <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <p class="reserva-tel reveal">También podés escribirme al <a href="https://wa.me/5493426144332" target="_blank" rel="noopener">+54 9 342 614 4332</a></p>
   </div>
-  <a href="https://wa.me/5493426144332?text=Hola%20Yami!%20Quiero%20reservar%20un%20turno%20%F0%9F%92%87%E2%80%8D%E2%99%80%EF%B8%8F" class="btn-turno" target="_blank">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    Reservá tu turno ahora
-  </a>
 </section>
 
-<!-- ══ CONTACTO ══ -->
-<section class="contacto-section" id="contacto">
-  <div class="sec-eyebrow reveal">📞 Contacto</div>
-
-  <div class="contacto-btns">
-    <a class="c-btn c-btn-wa" href="https://wa.me/5493426144332" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp
-    </a>
-    <a class="c-btn c-btn-ig" href="https://www.instagram.com/yamiespinosa.hairstudio" target="_blank">
-      📸 Instagram
-    </a>
+<!-- ══ FOOTER ══ -->
+<footer class="foot" id="contacto">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Yami <em>Espinosa</em></div>
+      <p class="foot-tag">Hair Studio · Santa Fe<br>Potencio tu esencia ✨</p>
+    </div>
+    <div>
+      <h4>Navegación</h4>
+      <a href="#top">Inicio</a><a href="#servicios">Servicios</a><a href="#resenas">Reseñas</a><a href="#faq">Preguntas</a><a href="#turnos">Reservas</a>
+    </div>
+    <div>
+      <h4>Servicios</h4>
+      <a href="#servicios">Color</a><a href="#servicios">Balayage &amp; Contouring</a><a href="#servicios">Alisado sin formol</a><a href="#servicios">Nutrición &amp; Hidratación</a><a href="#servicios">Corte &amp; Peinado</a>
+    </div>
+    <div>
+      <h4>Contacto</h4>
+      <a href="https://wa.me/5493426144332" target="_blank" rel="noopener">WhatsApp · +54 9 342 614 4332</a>
+      <a href="https://www.instagram.com/yamiespinosa.hairstudio" target="_blank" rel="noopener">Instagram · @yamiespinosa.hairstudio</a>
+      <span class="fl">Lunes a domingo · 6 a 19 hs</span>
+      <span class="fl">Feriados incluidos · Santa Fe, Argentina</span>
+    </div>
   </div>
-  <p style="font-size:14px;color:var(--texto-suave);margin-top:24px;font-weight:300">
-    Atención <strong style="color:var(--dorado)">Lunes a Domingo</strong> · 6:00 a 19:00 hs · <strong style="color:var(--dorado)">Santa Fe, Argentina</strong>
-  </p>
-</section>
-
-<footer>
-  © 2025 Yami Espinosa Hair Studio · Santa Fe, Argentina<br>
-  <span>Potencio tu esencia ✨</span>
+  <div class="foot-bottom"><span>© 2026 Yami Espinosa Hair Studio. Todos los derechos reservados.</span><span>Atiendo con turno previo</span></div>
 </footer>
 
+<div class="yami-bar" id="yamiBar">
+  <span class="yami-bar-txt" id="yamiEstado"></span>
+  <a class="yami-bar-cta" id="yamiBarCta" href="#" target="_blank" rel="noopener">💬 Reservá tu cita</a>
+  <button class="yami-bar-x" onclick="document.getElementById('yamiBar').style.display='none';document.body.style.paddingBottom='0'" aria-label="Cerrar">✕</button>
+</div>
+
+<script>
+(function(){
+  // Menú superior: se vuelve sólido al scrollear
+  var n = document.getElementById('topnav');
+  function f(){ n.classList.toggle('solid', window.scrollY > 40); }
+  window.addEventListener('scroll', f, {passive:true}); f();
+
+  // Barra inferior: estado según el horario de Yami (6 a 19 hs, todos los días)
+  var h;
+  try { h = parseInt(new Intl.DateTimeFormat('es-AR',{hour:'numeric',hour12:false,timeZone:'America/Argentina/Buenos_Aires'}).format(new Date()),10); }
+  catch(e){ h = new Date().getHours(); }
+  var abierto = (h >= 6 && h < 19);
+  var est = document.getElementById('yamiEstado');
+  var cta = document.getElementById('yamiBarCta');
+  est.innerHTML = abierto
+    ? '🟢 <b>Agenda abierta</b> · Atiendo todos los días de 6 a 19 hs'
+    : '🌙 Ahora estoy fuera de horario · <b>Escribime y te respondo en cuanto abra</b>';
+  cta.href = 'https://wa.me/5493426144332?text=' + encodeURIComponent('Hola Yami! Quiero reservar una cita 💇');
+})();
+</script>
+
+
+<script>
+(function(){
+  // Servicios: se abre uno a la vez
+  document.querySelectorAll('.svc-row').forEach(function(b){
+    b.addEventListener('click', function(){
+      var it = b.closest('.svc-item'), was = it.classList.contains('open');
+      document.querySelectorAll('.svc-item.open').forEach(function(i){
+        i.classList.remove('open'); i.querySelector('.svc-row').setAttribute('aria-expanded','false');
+      });
+      if(!was){ it.classList.add('open'); b.setAttribute('aria-expanded','true'); }
+    });
+  });
+  // Menú móvil
+  var bg = document.getElementById('burger'), mn = document.getElementById('mnav');
+  function cerrar(){ mn.classList.remove('open'); bg.classList.remove('open'); bg.setAttribute('aria-expanded','false'); document.body.style.overflow=''; }
+  bg.addEventListener('click', function(){
+    var abre = !mn.classList.contains('open');
+    mn.classList.toggle('open', abre); bg.classList.toggle('open', abre);
+    bg.setAttribute('aria-expanded', abre ? 'true' : 'false');
+    document.body.style.overflow = abre ? 'hidden' : '';
+  });
+  mn.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', cerrar); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') cerrar(); });
+})();
+</script>
 <script>
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
